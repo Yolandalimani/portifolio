@@ -12,6 +12,7 @@ body{
     margin-top: 70px;
     color: white;
     padding: 0 5%;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 /* Header */
@@ -22,7 +23,7 @@ body{
 
 nav ul{
     display: flex;
-    gap: 30px;
+    gap: 60px;
 }
 nav ul li{
     list-style: none;
@@ -32,6 +33,7 @@ nav ul li a{
     text-decoration: none;
     color: white;
     font-size: 18px;
+    font-weight: bold;
 }
 /* Main section */
 .box{
@@ -39,10 +41,11 @@ nav ul li a{
     justify-content: space-between;
     margin-top: 30px;
     align-items: center;
+    margin-bottom: 70px;
 }
 .left-side{
     margin-top: 50px;
-    width: 350px;
+    width: 400px;
 }
 .left-side h3{
     margin-top: -20px;
@@ -54,8 +57,9 @@ nav ul li a{
     background-color: black;
     padding: 10px 15px;
     font-size: 14px;
-    border: 1px solid green;
+    border: 1px solid #3CEE5D;
     border-radius: 4px;
+    font-weight: bold;
 }
 .left-side .button{
     display: flex;
@@ -63,5 +67,25 @@ nav ul li a{
     margin-top: 60px;
 }
 .right-side img{
-    width: 500px;
+    width: 450px;
+}
+
+footer hr{
+    margin: 0 -6%;
+    border: 0;
+    border-top: 1px solid grey;
+}
+.socials{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+.socials a{
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+}
+.socials a i{
+    color: white;
 }
