@@ -24,6 +24,7 @@ body{
 .logo img{
     width: 100px;
     height: 100px;
+    margin-left: -20px;
 }
 
 nav ul{
@@ -124,4 +125,7 @@ main{
 .skills-wrap{
     display: flex;
     gap: 150px;
+}
+.project-lists li{
+    padding: 5px;
 }
