@@ -21,6 +21,10 @@ body{
     display: flex;
     justify-content: space-between;
 } 
+.logo img{
+    width: 100px;
+    height: 100px;
+}
 
 nav ul{
     display: flex;
