@@ -116,3 +116,12 @@ footer hr{
 main{
     margin-top: 5%;
 }
+.skills-info img{
+    height: 100px;
+    width: 100px;
+    object-fit: contain;
+}
+.skills-wrap{
+    display: flex;
+    gap: 150px;
+}
