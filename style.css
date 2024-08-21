@@ -1,18 +1,19 @@
 body{
     padding: 0;
     margin: 0;
-    background-color: black;
+    background-color: burlywood;
 }
 
 /* Conatiner*/
 .container{
     margin: 50px;
-    background-color: #02122C;
+    background-color: blanchedalmond;
     height: 600px;
     margin-top: 70px;
-    color: white;
+    color: black;
     padding: 0 5%;
     font-family: Arial, Helvetica, sans-serif;
+    position: relative;
 }
 
 /* Header */
@@ -31,9 +32,9 @@ nav ul li{
 
 nav ul li a{
     text-decoration: none;
-    color: white;
+    color: black;
     font-size: 18px;
-    font-weight: bold;
+    font-weight:bold;
 }
 /* Main section */
 .box{
@@ -41,7 +42,7 @@ nav ul li a{
     justify-content: space-between;
     margin-top: 30px;
     align-items: center;
-    margin-bottom: 70px;
+    margin-bottom: 100px;
 }
 .left-side{
     margin-top: 50px;
@@ -57,7 +58,7 @@ nav ul li a{
     background-color: black;
     padding: 10px 15px;
     font-size: 14px;
-    border: 1px solid #3CEE5D;
+    border: 1px solid brown;
     border-radius: 4px;
     font-weight: bold;
 }
@@ -69,11 +70,16 @@ nav ul li a{
 .right-side img{
     width: 450px;
 }
+footer{
+    position: absolute;
+    bottom: 10%;
+    width: 89%;
+}
 
 footer hr{
     margin: 0 -6%;
     border: 0;
-    border-top: 1px solid grey;
+    border-top: 1px solid black;
 }
 .socials{
     display: flex;
@@ -82,10 +88,27 @@ footer hr{
 }
 .socials a{
     text-decoration: none;
-    color: white;
-    font-size: 18px;
-    font-weight: bold;
+    color: black;
+    font-size: 16px;
+    font-weight: 580;
 }
-.socials a i{
-    color: white;
+
+.wrap{
+    display: flex;
+    justify-content: space-between;
+}
+.card{
+    border: 0;
+    background-color: burlywood;
+    width: 300px;
+    height: 150px;
+    border-radius: 4px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+.card p{
+    margin-left: 10%;
+}
+main{
+    margin-top: 5%;
 }
