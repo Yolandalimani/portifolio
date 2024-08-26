@@ -2,6 +2,9 @@ body{
     padding: 0;
     margin: 0;
     background-color: burlywood;
+    display: flex;
+    width: 100%;
+    min-height: 100vh
 }
 
 /* Conatiner*/
@@ -16,13 +19,17 @@ body{
     position: relative;
     max-width: 1000px;
     margin-inline: auto;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
 }
-/* @media (min-width: 1200px) { 
+@media (max-width: 1024px) { 
     .container {
-        max-width: 1000px;
-        margin-inline: auto;
+        min-height: 100vh;
+        margin-block: 0;
+        height: 100%;
     }
-} */
+}
 
 /* Header */
  header{
@@ -38,6 +45,11 @@ body{
 nav ul{
     display: flex;
     gap: 60px;
+}
+@media (max-width: 1024px) { 
+    .nav-menu nav ul {
+        flex-direction: column;
+    }
 }
 nav ul li{
     list-style: none;
@@ -55,6 +67,47 @@ nav .active{
 nav ul li a:hover{
     color: burlywood;
 }
+.nav-menu {
+    display: flex;
+}
+.nav-toggle{
+    display: none;
+}
+
+/* Responsive styles */
+@media (max-width: 1024px) {
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px; /* Adjust based on header height */
+        right: 20px;
+        background-color: #fff;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 10px;
+    }
+
+    .nav-menu.active {
+        display: block;
+        width: 100%;
+        position: absolute;
+        top: 105px;
+        margin: 0 -20px 0 0;
+    }
+
+    .nav-toggle {
+        display: block;
+        background: none;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+    }
+
+    .nav-toggle i {
+        color: #333;
+    }
+}
+
 /* Main section */
 .box{
     display: flex;
@@ -64,9 +117,20 @@ nav ul li a:hover{
     /*margin-bottom: 100px;*/
     margin-top: -10px;
 }
+@media (max-width: 1024px) { 
+    .box {
+        margin-top: -20px;
+        flex-direction: column;
+        row-gap: 1em;
+    }
+}
 .left-side{
-   
     width: 400px;
+}
+@media (max-width: 460px) { 
+    .left-side {
+        width: 100%;
+    }
 }
 .left-side h3{
     margin-top: -20px;
@@ -96,9 +160,8 @@ nav ul li a:hover{
     width: 450px;
 }
 footer{
-    position: absolute;
-    bottom: 10%;
     width: 89%;
+    padding: 20px 0;
 }
 footer::before {
     content: "";
@@ -106,9 +169,6 @@ footer::before {
     width: 100%; /* Full width of the parent element */
     height: 1px; /* Line height */
     background-color: black; /* Line color */
-    position: absolute;
-    top: 0; /* Position at the top of the footer */
-    left: 0;
 }
 footer hr{
     margin: 0 -6%;
@@ -130,6 +190,13 @@ footer hr{
 .wrap{
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
+}
+@media (max-width: 720px) { 
+    .wrap {
+        width: 300px;
+        margin-inline: auto;
+    }
 }
 .card{
     border: 0;
@@ -140,12 +207,25 @@ footer hr{
     padding: 10px;
     margin-bottom: 10px;
 }
+@media (max-width: 400px) { 
+    .card {
+        width: 280px;
+    }
+}
+
 .card p{
     margin-left: 10%;
 }
  main{
     margin-top: -20px;
+    flex: 1;
 } 
+@media (max-width: 1024px) { 
+    .skills-info {
+        max-width: 200px;
+        margin: 0 auto;
+    }
+}
 .skills-info img{
     height: 100px;
     width: 100px;
@@ -154,6 +234,12 @@ footer hr{
 .skills-wrap{
     display: flex;
     gap: 150px;
+}
+@media (max-width: 1024px) { 
+    .skills-wrap {
+        flex-direction: column;
+        gap: 0;
+    }
 }
 .project-lists li{
     padding: 5px;
@@ -229,4 +315,52 @@ footer hr{
 .contacts a{
     text-decoration: none;
     color: black;
+}
+.hire-wrap{
+    display: flex;
+    justify-content: space-between;
+}
+@media (max-width: 1024px) { 
+    .hire-wrap {
+        flex-direction: column;
+    }
+}
+.hireMe-form{
+    display: flex;
+}
+@media (max-width: 1024px) { 
+    .hireMe-form {
+        flex-direction: column;
+    }
+    .hireMe-form .button{
+        margin-top: 10px;
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+}
+.form-wrap{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-right: 30px;
+}
+@media (max-width: 1024px) { 
+    .form-wrap {
+        margin: 0;
+    }
+}
+form input{
+    width: 300px;
+    height: 35px;
+    border: 1px solid black;;
+    border-radius: 4px;
+    
+}
+textarea{
+    height: 150px;
+}
+form .button{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
 }
