@@ -136,7 +136,7 @@ nav ul li a:hover{
     margin-top: -20px;
     font-size: 24px;
 }
-.button a {
+.button button {
     text-decoration: none;
     color: white;
     background-color: black;
@@ -146,9 +146,10 @@ nav ul li a:hover{
     border-radius: 4px;
     font-weight: bold;
 }
-.button a:hover{
+.button button:hover{
     color:black;
     background-color: white;
+    cursor: pointer;
 }
 
 .left-side .button{
@@ -160,7 +161,7 @@ nav ul li a:hover{
     width: 450px;
 }
 footer{
-    width: 89%;
+    width: 100%;
     padding: 20px 0;
 }
 footer::before {
