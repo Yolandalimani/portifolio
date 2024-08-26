@@ -136,7 +136,8 @@ nav ul li a:hover{
     margin-top: -20px;
     font-size: 24px;
 }
-.button button {
+/*.button{
+    
     text-decoration: none;
     color: white;
     background-color: black;
@@ -146,7 +147,29 @@ nav ul li a:hover{
     border-radius: 4px;
     font-weight: bold;
 }
-.button button:hover{
+.button a{
+    text-decoration: none;
+    color: white;
+}
+.button:hover{
+    color:black;
+    background-color: white;
+    cursor: pointer;
+}*/
+.button button, .button a{
+    text-decoration: none;
+    color: white;
+    background-color: black;
+    padding: 10px 15px;
+    border: 1px solid burlywood;
+    border-radius: 4px;
+}
+/*@@ -146,9 +146,10 @@ nav ul li a:hover{
+    border-radius: 4px;
+    font-weight: bold;
+    
+}*/
+.button button:hover, .button a:hover{
     color:black;
     background-color: white;
     cursor: pointer;
