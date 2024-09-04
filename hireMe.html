@@ -6,6 +6,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
 </head>
 <body>
     <div class="container">
@@ -54,12 +55,12 @@
                         </p>
                     </div>
                 </div>
-                <form class="hireMe-form">
+                <form class="hireMe-form" id="contactForm">
                     <div class="form-wrap">
-                    <input type="text" id="name" name="name" placeholder="name">
-                    <input type="email" id="email" name="email" placeholder="email">
-                    <input type="text" id="subject" name="subject" placeholder="subject">
-                    <textarea placeholder="Message"></textarea>
+                    <input type="text" id="name" name="name" placeholder="Name">
+                    <input type="email" id="email" name="email" placeholder="youremail@gmail.com">
+                    <input type="text" id="subject" name="subject" placeholder="Subject">
+                    <textarea placeholder="Message" id="message" name="message" required></textarea>
                     </div>
                     <div class="button">
                         <button href="#">Submit <i class="fa-solid fa-paper-plane"></i></button>
@@ -76,5 +77,33 @@
         </footer>
     </div>
     <script src="assets/js/nav-toggle.js"></script>
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            // Gather form data
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('email').value;
+            var subject = document.getElementById('subject').value;
+            var message = document.getElementById('message').value;
+
+            // Send email using SMTP.js
+            Email.send({
+                SecureToken: "56D5024B8FF30B62329BD396C0CA9E447704", // Replace with your actual secure token from smtpjs.com
+                To: 'limaniyolanda@gmail.com',
+                From: email,
+                Subject: subject,
+                Body: "Name: " + name + "<br>Email: " + email + "<br>Message: " + message
+            }).then(
+                function(response) {
+                    if (response == 'OK') {
+                        alert('Your message has been sent successfully!');
+                    } else {
+                        alert('There was an error sending your message: ' + response);
+                    }
+                }
+            );
+        });
+    </script>
 </body>
 </html>
