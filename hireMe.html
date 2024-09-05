@@ -91,25 +91,22 @@
             Email.send({
                 Host : "smtp.elasticemail.com",
                 Username : "limaniyolanda@gmail.com",
-                Password: "155A26E1113567D5238AAE61DFA3108D305D17D300D1BF3A07DD84B37C25C537F1C3E3F95DF4C03BBED8A1BE68DBFF56",
+                Password : "56D5024B8FF30B62329BD396C0CA9E447704",
                 To: 'limaniyolanda@gmail.com',
                 From: email,
                 Subject: subject,
-                Body: "Name: " + name + "<br>Email: " + email + "<br>Message: " + message,
-                Port: 587
+                Body: "Name: " + name + "<br>Email: " + email + "<br>Message: " + message
             }).then(
                 function(response) {
                     if (response == 'OK') {
                         alert('Your message has been sent successfully!');
                     } else {
-                        console.log('Error response:', response); // Debugging
                         alert('There was an error sending your message: ' + response);
                     }
                 }
             )
             .catch(
                 function(error) {
-                    console.error('Error caught:', error); // Debugging
                     alert('An unexpected error occurred: ' + error);
                 }
             )
