@@ -96,7 +96,7 @@
                 From: email,
                 Subject: subject,
                 Body: "Name: " + name + "<br>Email: " + email + "<br>Message: " + message,
-                EnableSsl: true
+                Port: 587
             }).then(
                 function(response) {
                     if (response == 'OK') {
